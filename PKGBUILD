@@ -13,4 +13,6 @@ package() {
   install -Dm755 rfetch.fish    "$pkgdir/usr/bin/rfetch"
   install -Dm755 spdx.sh        "$pkgdir/usr/bin/spdx"
   install -Dm755 sudo.fish      "$pkgdir/usr/bin/sudo"
+
+  install -Dm644 _completions.fish "$pkgdir/usr/share/fish/vendor_completions.d/rubbish.fish"
 }

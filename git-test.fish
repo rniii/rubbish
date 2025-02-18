@@ -9,6 +9,6 @@ rsync -lptRq (git ls-files) $tmpdir
 
 git diff --patch | begin
   cd $tmpdir
-  git apply --reverse -
+  git apply --allow-empty --reverse -
   $argv
 end

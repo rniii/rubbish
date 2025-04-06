@@ -10,6 +10,7 @@ package() {
 
   install -Dm755 git-test.fish  "$pkgdir/usr/bin/git-test"
   install -Dm755 musicdl.sh     "$pkgdir/usr/bin/musicdl"
+  install -Dm755 new.rb         "$pkgdir/usr/bin/new"
   install -Dm755 rfetch.fish    "$pkgdir/usr/bin/rfetch"
   install -Dm755 spdx.sh        "$pkgdir/usr/bin/spdx"
   install -Dm755 sudo.fish      "$pkgdir/usr/bin/sudo"

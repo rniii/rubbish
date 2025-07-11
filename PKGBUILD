@@ -1,6 +1,6 @@
 pkgname=rubbish
 pkgver=0.1.0
-pkgrel=1
+pkgrel=2
 license=('CC0-1.0')
 arch=(any)
 

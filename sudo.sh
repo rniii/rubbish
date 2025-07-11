@@ -20,6 +20,4 @@ while true; do
   shift
 done
 
-echo "$@"
-
-# run0 "$@"
+run0 "$@"

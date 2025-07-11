@@ -2,7 +2,7 @@
 
 _spdx_files() {
   local -a files
-  files=(${(@f)"$(echo /usr/share/licenses/spdx/* | sed 's/.txt$//')"})
+  files=(${(@f)"$(ls /usr/share/licenses/spdx | sed 's/.txt$//')"})
 
   _describe file files
 }

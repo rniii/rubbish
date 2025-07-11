@@ -42,11 +42,26 @@ when "ts"
   puts "+ dprint.json"
   open("dprint.json", "w") << <<~eos
   {
-    "excludes": ["node_modules"],
+    "typescript": {
+      "quoteStyle": "preferDouble"
+    },
+    "excludes": ["**/node_modules"],
     "plugins": [
-      "https://plugins.dprint.dev/typescript-0.89.3.wasm",
-      "https://plugins.dprint.dev/json-0.19.2.wasm"
+      "https://plugins.dprint.dev/typescript-0.94.0.wasm",
     ]
+  }
+  eos
+
+  puts "+ tsconfig.json" << <<~eos
+  {
+    "compilerOptions": {
+      "strict": true,
+      "baseUrl": "./src",
+      "module": "ESNext",
+      "moduleResolution": "bundler",
+      "noEmit": true,
+      "target": "ESNext"
+    }
   }
   eos
 

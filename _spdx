@@ -1,0 +1,14 @@
+#compdef spdx
+
+_spdx_files() {
+  local -a files
+  files=(${(@f)"$(echo /usr/share/licenses/spdx/* | sed 's/.txt$//')"})
+
+  _describe file files
+}
+
+_spdx() {
+  _arguments ":file:_spdx_files"
+}
+
+_spdx "$@"
